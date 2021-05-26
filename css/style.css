@@ -1,0 +1,1475 @@
+/* обнуление */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+:focus,
+:active {
+  outline: none;
+}
+a * {
+  color: black;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:visited {
+  color: #1890ff;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+/* ОБЩАЯ СТРАНИЦА */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
+  );
+}
+/* осн концент */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+/* шапка */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.promo-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 39px;
+  line-height: 46px;
+  color: #302c34;
+}
+.promo {
+  box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+  background: #fff1b8 url("../img/promo-bgimg.png") no-repeat top right -260px;
+  background-size: auto;
+  background-size: auto;
+  background-size: auto;
+  border-radius: 10px;
+  padding: 68px 70px;
+  margin-top: 40px;
+  background-size: 89%;
+  margin-bottom: 56px;
+}
+.input {
+  background: #ffffff;
+  /* Gray / gray-5 */
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+  background-repeat: no-repeat !important;
+  background-position: left 11px center !important;
+  padding-left: 35px;
+}
+.address-input {
+  flex: 0.8;
+  background: url("../img/homeiconsearch.svg");
+}
+.search-input {
+  width: 300px;
+  background: url("../img/restsearch.svg");
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #ffffff;
+  /* Gray / gray-5 */
+
+  border: 1px solid #d9d9d9;
+  /* ghost button shadow */
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+  color: #595959;
+  font-size: 16px;
+  line-height: 24px;
+}
+.button-first-header,
+.modal-footer-button.button-first {
+  background: #1890ff;
+  border-radius: 2px;
+  color: white;
+  margin-right: 10px;
+  border: 1px solid #1890ff;
+  font-family: "SF Pro Display";
+}
+.button-icon {
+  margin-right: 5px;
+}
+.promo-text {
+  max-width: 354px;
+  line-height: 28px;
+}
+.restaurants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  margin: 0;
+}
+.explorer {
+  flex-basis: 91%;
+  margin-bottom: 21px;
+}
+.cards-maingoods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 112px;
+}
+.card {
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  flex-basis: 30%;
+}
+.card-image {
+  object-fit: cover;
+}
+.card-text {
+  padding-top: 20px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-bottom: 35px;
+}
+.card-headtxt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+.card-tag {
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #262626;
+  border-radius: 2px;
+  padding: 1px 8px;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+}
+.rating,
+.rating-main {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin-right: 26px;
+  color: #ffc107;
+  flex-basis: 20%;
+}
+.price,
+.category {
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+
+  /* Gray / gray-7 */
+
+  color: #8c8c8c;
+}
+.price {
+  margin-right: 10px;
+}
+.category {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.icondot {
+  display: flex;
+  align-items: center;
+  flex-basis: 40%;
+}
+.icondot-rest {
+  flex-basis: 47%;
+}
+.icondot-text {
+  margin-left: 10px;
+}
+.rating-icondot-text {
+  margin-left: 0;
+}
+/* .price:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #8c8c8c;
+  display: inline-flex;
+  border-radius: 50%;
+  margin-left: 10px;
+  vertical-align: middle;
+} */
+/* Подвал */
+.footer {
+  background: white;
+  padding: 60px 0;
+}
+.footer-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-link {
+  display: inline-block;
+  color: #595959;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+.footer-link:not(:last-child) {
+  margin-right: 15px;
+}
+.footer-nav {
+  margin-left: 35px;
+  margin-right: auto;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+}
+.social-link:not(:last-child) {
+  margin-right: 21px;
+}
+
+/* страница РЕСТОРАНЫ */
+.rest-container {
+  max-width: 1200px;
+  margin: auto;
+}
+.restaurants-header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+.card-text-header {
+  margin-left: 30px;
+}
+.card-info-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5px;
+  width: 308px;
+}
+.rest-card-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
+.rest-price-header {
+  flex-basis: 28%;
+}
+.rest-price {
+  flex-basis: 100%;
+}
+/*.rest-price,
+.rest-category {
+  font-size: 18px;
+  color: #8c8c8c;
+}*/
+.rest-price-header,
+.rest-price,
+.rest-category {
+  font-size: 18px;
+  line-height: 32px;
+  color: #8c8c8c;
+}
+.rest-price-info {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.rest-price-button {
+  padding: 8px 16px;
+  background: #1890ff;
+  border-radius: 2px;
+  border: none;
+  color: white;
+}
+.rest-text-button {
+  margin-left: 32px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+.card-rest {
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  flex-basis: 32%;
+}
+.rest-price-cart {
+  vertical-align: top;
+}
+.rest-card-image {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 29px;
+}
+/* Модальное окно */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.opened {
+  display: flex;
+}
+.modal-dialog {
+  margin: auto;
+  max-width: 780px;
+  width: 95%;
+  /*min-height: 552px;*/
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 40px 45px;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.modal-title {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+.close {
+  font-size: 36px;
+  border: none;
+  background: transparent;
+}
+.food-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.food-name {
+  font-size: 18px;
+  line-height: 32px;
+}
+.food-price {
+  margin-left: auto;
+  margin-right: 47px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+.food-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  background: #ffffff;
+  border: 1px solid #40a9ff;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #40a9ff;
+}
+.counter {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.modal-body {
+  margin-bottom: 57px;
+}
+.modal-price-tag {
+  padding: 15px 20px;
+  background: #262626;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fafafa;
+}
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.modal-footer-button {
+  padding: 8px 16px;
+  background: #ffffff;
+  border-radius: 2px;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: normal;
+  color: #595959;
+  border: 1px solid;
+}
+/* Медиа-запросы */
+@media (max-width: 1366px) {
+  .container {
+    max-width: 960px;
+  }
+  .rest-container {
+    max-width: 1100px;
+    margin: auto;
+  }
+  .promo {
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+    background: #fff1b8 url("../img/promo-bgimg.png") no-repeat top right -250px;
+    padding: 50px 70px;
+    background-size: 100%;
+  }
+  /* страница РЕСТОРАНЫ */
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  .card-text-header {
+    margin-left: 30px;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 16px;
+    line-height: 25px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 32%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  .price,
+  .category {
+    font-size: 14px;
+  }
+  .rating,
+  .rating-main {
+    margin-right: 21px;
+  }
+}
+@media (max-width: 1200px) {
+  .rest-container {
+    max-width: 960px;
+    margin: auto;
+  }
+  /* страница РЕСТОРАНЫ */
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  .card-text-header {
+    margin-left: 30px;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 14px;
+    line-height: 24px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 32%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+}
+/* страница РЕСТОРАНЫ */
+@media (max-width: 1040px) {
+  .rest-container {
+    max-width: 900px;
+    margin: auto;
+  }
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  .card-text-header {
+    margin-left: 30px;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 13px;
+    line-height: 21px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 32%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 708px;
+  }
+  .rest-container {
+    max-width: 700px;
+    margin: auto;
+  }
+  /* страница РЕСТОРАНЫ */
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  .card-text-header {
+    margin-left: 30px;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 14px;
+    line-height: 21px;
+    flex-basis: 90%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 49%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  .promo {
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+    background: #fff1b8 url("../img/promo-bgimg.png") no-repeat top right -270px;
+    padding: 28px 70px;
+    padding-left: 70px;
+    background-size: 677px;
+    padding-left: 30px;
+    background-position-x: 253px;
+  }
+  .restaurants-title {
+    font-size: 28px;
+    flex-basis: 13%;
+  }
+  .card {
+    flex-basis: 49%;
+  }
+  .price,
+  .category {
+    font-size: 14px;
+  }
+  .rating,
+  .rating-main {
+    margin-right: 21px;
+  }
+  .promo-title {
+    font-size: 28px;
+    line-height: 31px;
+  }
+  .promo-text {
+    line-height: 24px;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 582px;
+  }
+  .rest-container {
+    max-width: 650px;
+    margin: auto;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .address-input {
+    order: 4;
+    margin-top: 29px;
+    flex: 1;
+    flex-basis: 100%;
+  }
+  /* страница РЕСТОРАНЫ */
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  .card-text-header {
+    margin-left: 30px;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    width: 400px;
+  }
+  .mw768p {
+    font-size: 18px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+  }
+  .rest-price-header {
+    flex-basis: 58%;
+  }
+  .rest-price {
+    line-height: 21px;
+    flex-basis: 97%;
+  }
+  .rest-category {
+    flex-basis: 172%;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-price,
+  .rest-category {
+    font-size: 18px;
+    color: #8c8c8c;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 49%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  .card-info {
+    flex-wrap: wrap;
+  }
+  .rating,
+  .rating-main {
+    flex-basis: 35%;
+  }
+  .price {
+    margin-right: 7px;
+  }
+  .rating-main {
+    flex-basis: 24%;
+    margin-right: 12px;
+  }
+  .card-title {
+    font-size: 22px;
+  }
+}
+/* страница РЕСТОРАНЫ */
+@media (max-width: 730px) {
+  /* страница РЕСТОРАНЫ */
+  .rest-container {
+    max-width: 534px;
+    margin: auto;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .address-input {
+    order: 4;
+    margin-top: 29px;
+    flex: 1;
+    flex-basis: 100%;
+  }
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  /* КНОПКИ */
+  .button {
+    padding: 12px 11px 12px 14px;
+  }
+  .button-first-header {
+    padding-left: 15px;
+  }
+  .button-icon {
+    margin-right: 5px;
+    display: flex;
+    width: 16px;
+  }
+  .card-text-header {
+    margin-left: 30px;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 22px;
+    line-height: 25px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  /* страница РЕСТОРАНЫ */
+  .footer-nav {
+    margin-left: 0;
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .footer-logo {
+    order: 1;
+  }
+  .user-text,
+  .button-text {
+    display: none;
+  }
+  .social-links {
+    order: 2;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 90%;
+  }
+  /* страница РЕСТОРАНЫ */
+  .rest-container {
+    max-width: 80%;
+    margin: auto;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .address-input {
+    order: 4;
+    margin-top: 29px;
+    flex: 1;
+    flex-basis: 100%;
+  }
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  /* КНОПКИ */
+  .button {
+    padding: 12px 11px 12px 14px;
+  }
+  .button-first-header {
+    padding-left: 15px;
+  }
+  .button-icon {
+    margin-right: 5px;
+    display: flex;
+    width: 16px;
+  }
+  .restaurants-title {
+    font-size: 28px;
+    flex-basis: 26%;
+  }
+  .card-text-header {
+    margin-left: 0;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 22px;
+    line-height: 25px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  /* страница РЕСТОРАНЫ */
+  .footer-nav {
+    margin-left: 0;
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .footer-logo {
+    order: 1;
+  }
+  .user-text,
+  .button-text {
+    display: none;
+  }
+  .social-links {
+    order: 2;
+  }
+}
+@media (max-width: 578px) {
+  .container {
+    max-width: 90%;
+  }
+  /* страница РЕСТОРАНЫ */
+  .rest-container {
+    max-width: 90%;
+    margin: auto;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .address-input {
+    order: 4;
+    margin-top: 20px;
+    flex: 1;
+    flex-basis: 100%;
+  }
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+  }
+  .card-text-header {
+    margin-left: 0;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 18px;
+    line-height: 25px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  /* страница РЕСТОРАНЫ */
+  .card-info {
+    flex-wrap: wrap;
+  }
+  .rating,
+  .rating-main {
+    flex-basis: 35%;
+  }
+  .rating-main {
+    flex-basis: 13%;
+    margin-right: 12px;
+  }
+  /*.card-title {
+    font-size: 16px;
+  }*/
+  .card {
+    flex-basis: 100%;
+    /*display: flex;*/
+  }
+  .card-image {
+    width: 100%;
+  }
+  .footer {
+    padding: 30px;
+  }
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+  .button {
+    padding-right: 10px;
+  }
+  .button-icon {
+    margin-right: 5px;
+    display: flex;
+    width: 16px;
+  }
+  .footer-nav {
+    margin-left: 0;
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .footer-logo {
+    order: 1;
+  }
+  .user-text,
+  .button-text {
+    display: none;
+  }
+  .social-links {
+    order: 2;
+  }
+}
+@media (max-width: 552px) {
+  .food-name {
+    flex-basis: 178px;
+  }
+  .food-price {
+    margin-left: 58px;
+  }
+  .food-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 67%;
+    margin-top: 2%;
+  }
+}
+@media (max-width: 500px) {
+  .food-name {
+    flex-basis: 178px;
+  }
+  .food-price {
+    margin-left: 58px;
+  }
+  .food-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 67%;
+    margin-top: 2%;
+  }
+  .button-first {
+    padding-left: 15px;
+    flex-basis: 62%;
+    margin-top: 38px;
+    margin-bottom: 10px;
+  }
+  .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  /* страница РЕСТОРАНЫ */
+  .rest-container {
+    max-width: 90%;
+    margin: auto;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .address-input {
+    order: 4;
+    margin-top: 20px;
+    flex: 1;
+    flex-basis: 100%;
+  }
+  .restaurants-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+  }
+  .card-text-header {
+    margin-left: 0;
+  }
+  .card-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .rest-card-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .rest-price {
+    font-size: 18px;
+    line-height: 25px;
+    flex-basis: 100%;
+    color: #8c8c8c;
+  }
+  .rest-price-info {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .rest-price-button {
+    padding: 8px 16px;
+    background: #1890ff;
+    border-radius: 2px;
+    border: none;
+    color: white;
+  }
+  .rating-main {
+    flex-basis: 20%;
+    margin-right: 12px;
+  }
+  .rest-text-button {
+    margin-left: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .card-rest {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+  }
+  .rest-price-cart {
+    vertical-align: top;
+  }
+  .rest-card-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 29px;
+  }
+  .restaurants {
+    flex-wrap: wrap;
+  }
+  .footer-block {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-logo {
+    order: 0;
+  }
+  .search-input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .food-row {
+    align-items: center;
+    flex-direction: column;
+  }
+  .food-name {
+    flex-basis: 66px;
+  }
+  .food-counter {
+    margin-left: 0;
+  }
+}
